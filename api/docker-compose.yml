@@ -1,0 +1,17 @@
+services:
+  db:
+    container_name: viacao-calango-db
+    image: mysql:8.0
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+    networks:
+      - viacao-calango
+    volumes:
+      - db_data:/var/lib/mysql
+networks:
+  viacao-calango:
+    driver: bridge
+volumes:
+  db_data:
