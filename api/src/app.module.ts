@@ -5,12 +5,14 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { DatabaseModule } from './database/database.module';
 import { ConfigModule } from '@nestjs/config';
+import { DriverModule } from './driver/driver.module';
 
 @Module({
   imports: [AuthModule, UsersModule, DatabaseModule,
     ConfigModule.forRoot({
       isGlobal:true
-    })
+    }),
+    DriverModule
   ],
   controllers: [AppController],
   providers: [AppService],

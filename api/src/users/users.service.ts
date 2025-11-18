@@ -1,4 +1,4 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable, UnauthorizedException } from '@nestjs/common';
 import { Prisma, Role, User } from 'generated/prisma/client';
 import { DatabaseService } from 'src/database/database.service';
 import { UserDTO } from './user.dto';
