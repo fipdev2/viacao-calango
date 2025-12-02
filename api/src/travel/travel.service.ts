@@ -1,8 +1,8 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { Prisma } from "generated/prisma/client";
 import { DatabaseService } from "src/database/database.service";
+
 import { CreateTravelDto } from "./dtos/create-travel.dto";
-import { response } from "express";
 
 @Injectable()
 export class TravelService {
@@ -10,7 +10,7 @@ export class TravelService {
 
     async createTravel(createTravelDto: CreateTravelDto) {
         const travel = await this.databaseService.travel.create({
-            data: { 
+            data: {
                 destination: createTravelDto.destination,
                 arrival: createTravelDto.arrival,
                 departure: createTravelDto.departure,

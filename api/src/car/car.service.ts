@@ -1,6 +1,8 @@
 import { Prisma } from "generated/prisma/client";
 import { DatabaseService } from "src/database/database.service";
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class CarService {
     constructor(private readonly databaseService: DatabaseService) { }
 
@@ -48,3 +50,4 @@ export class CarService {
         }
         return deletedCar;
     }
+}

@@ -7,6 +7,7 @@ import { RolesGuard } from 'src/auth/roles.guard';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import { DriverIdDto } from './dtos/driver-id.dto';
 import { CreateDriverDto } from './dtos/create-driver.dto';
+
 @Controller('driver')
 export class DriverController {
     constructor(
